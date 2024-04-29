@@ -1,0 +1,165 @@
+/* stylelint-disable at-rule-no-unknown */
+/* stylelint-disable csstree/validator */
+@use "./_colors.scss";
+@use "./_fonts.scss";
+
+.recipe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 735px;
+  min-width: 320px;
+  margin-inline: auto;
+  background-color: colors.$light;
+  color: colors.$wengeBrown;
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: bold;
+    color: colors.$darkCharcoal;
+    font-family: fonts.$secondary-ff;
+  }
+
+  &__subtext {
+    font-size: 16px;
+    font-weight: 400;
+    color: colors.$wengeBrown;
+    letter-spacing: -0.01rem;
+    line-height: 1.5;
+  }
+
+  &__content {
+    padding: 40px 35px;
+  }
+
+  &__preparation {
+    background-color: colors.$roseWhite;
+    padding: 1.5rem;
+    margin-block: 40px;
+
+    &-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: colors.$darkRaspberry;
+      letter-spacing: 4%;
+      margin-block-end: 20px;
+    }
+
+    &-list {
+      li {
+        position: relative;
+        font-size: 16px;
+        font-weight: 400;
+        color: colors.$wengeBrown;
+        letter-spacing: -0.01rem;
+        line-height: 1.5;
+        padding-inline: 40px;
+
+        &::before {
+          content: "•";
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          transform: translateY(-50%);
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  &__ingredients,
+  &__instructions,
+  &__nutritions {
+    margin-block: 40px;
+
+    &-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: colors.$nutmeg;
+      font-family: fonts.$secondary-ff;
+      letter-spacing: 4%;
+      margin-block-end: 20px;
+    }
+
+    &-subtext {
+      font-size: 16px;
+      font-weight: 400;
+      color: colors.$wengeBrown;
+      letter-spacing: -0.05rem;
+      line-height: 1.5;
+    }
+
+    &-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      margin-block: 20px;
+
+      th,
+      td {
+        padding: 10px;
+        border-bottom: 1px solid colors.$lightGrey;
+        text-align: left;
+      }
+
+      th {
+        font-size: 16px;
+        font-weight: 400;
+        color: colors.$wengeBrown;
+        letter-spacing: 4%;
+        padding-inline-start: 50px;
+      }
+
+      td {
+        font-size: 16px;
+        font-weight: 400;
+        color: colors.$nutmeg;
+        letter-spacing: -0.01rem;
+        font-weight: bold;
+      }
+    }
+
+    &-list {
+      counter-reset: li;
+      li {
+        position: relative;
+        font-size: 16px;
+        font-weight: 400;
+        color: colors.$wengeBrown;
+        letter-spacing: -0.01rem;
+        line-height: 1.5;
+        padding-inline: 40px;
+
+        &::before {
+          content: "•";
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          transform: translateY(-50%);
+          font-size: 20px;
+          font-weight: bold;
+          color: colors.$nutmeg;
+        }
+      }
+    }
+  }
+
+  &__instructions {
+    li::before {
+      counter-increment: li;
+      content: counter(li) ".";
+      top: 0;
+      transform: unset;
+      font-size: 16px;
+    }
+  }
+}
