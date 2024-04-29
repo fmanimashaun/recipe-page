@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrecipe_page=self.webpackChunkrecipe_page||[]).push([[792],{98:()=>{}},e=>{e(e.s=98)}]);
