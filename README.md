@@ -40,8 +40,8 @@ Your users should be able to:
 
 ### Links
 
-- [Solution URL](https://github.com/fmanimashaun/social-links-profile)
-- [Live Site URL](https://fmanimashaun.github.io/social-links-profile/)
+- [Solution URL](https://github.com/fmanimashaun/recipe-page)
+- [Live Site URL](https://fmanimashaun.github.io/recipe-page/)
 
 ## My process
 
