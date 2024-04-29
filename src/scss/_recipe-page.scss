@@ -48,6 +48,10 @@
 
   &__content {
     padding: 40px 35px;
+
+    @media screen and (min-width: 735px) {
+      padding-inline: 0px;
+    }
   }
 
   &__preparation {
